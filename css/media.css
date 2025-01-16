@@ -516,6 +516,16 @@
     margin-right: 0;
   }
 }
+@media screen and (max-width: 576px) {
+  .hero__data-app {
+    top: 10px;
+  }
+}
+@media screen and (max-width: 455px) {
+  .hero__data-app {
+    top: 30px;
+  }
+}
 @media screen and (max-width: 423px) {
   .banner__logo {
     width: 200px;
@@ -529,5 +539,32 @@
     background: rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     z-index: 1;
+    padding: 40px 50px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .banner__content-app {
+    padding: 30px;
+  }
+
+  .hero__data-app {
+    top: 40px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .banner__content-app {
+    padding: 20px 30px;
+  }
+}
+@media screen and (max-width: 349px) {
+  .banner__content-app {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .hero__data-app {
+    top: 20px;
   }
 }

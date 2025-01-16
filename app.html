@@ -162,12 +162,12 @@
       </aside>
 
       <section class="content__wrapper">
-        <section class="content hero hero__content">
+        <section class="content hero hero__app">
           <div class="background hero__background">
             <img src="./images/app/bg-app.png" alt="hero" title />
           </div>
 
-          <div class="hero__data">
+          <div class="hero__data hero__data-app">
             <ul
               class="breadcrumbs"
               itemscope
@@ -285,11 +285,14 @@
               itemprop="mainEntity"
               itemtype="https://schema.org/Question"
             >
-              <h3 class="title medium faq__subtitle" itemprop="name">
+              <h3
+                class="title medium faq__subtitle js-button-expander"
+                itemprop="name"
+              >
                 A 20Bet é legalizada no Brasil?
               </h3>
               <div
-                class="faq__answer"
+                class="faq__answer js-expand-content"
                 itemscope
                 itemprop="acceptedAnswer"
                 itemtype="https://schema.org/Answer"
@@ -305,11 +308,14 @@
               itemprop="mainEntity"
               itemtype="https://schema.org/Question"
             >
-              <h3 class="title medium faq__subtitle" itemprop="name">
+              <h3
+                class="title medium faq__subtitle js-button-expander"
+                itemprop="name"
+              >
                 Tem bônus de boas-vindas na 20Bet?
               </h3>
               <div
-                class="faq__answer"
+                class="faq__answer js-expand-content"
                 itemscope
                 itemprop="acceptedAnswer"
                 itemtype="https://schema.org/Answer"
@@ -319,12 +325,27 @@
                 </p>
               </div>
             </li>
-            <li class="faq__item">
-              <h3 class="title medium faq__subtitle">
+            <li
+              class="faq__item"
+              itemscope
+              itemprop="mainEntity"
+              itemtype="https://schema.org/Question"
+            >
+              <h3
+                class="title medium faq__subtitle js-button-expander"
+                itemprop="name"
+              >
                 Tem bônus de boas-vindas na 20Bet?
               </h3>
-              <div class="faq__answer">
-                <p>Sim, disponível para sistemas operacionais iOS e Android.</p>
+              <div
+                class="faq__answer js-expand-content"
+                itemscope
+                itemprop="acceptedAnswer"
+                itemtype="https://schema.org/Answer"
+              >
+                <p itemprop="text">
+                  Sim, disponível para sistemas operacionais iOS e Android.
+                </p>
               </div>
             </li>
           </ul>
