@@ -1,29 +1,41 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const faqItems = document.querySelectorAll(".js-button-expander");
-  
-    faqItems.forEach((item) => {
-      item.addEventListener("click", function () {
-        const faqItem = this.closest(".faq__item");
-  
-        faqItem.classList.toggle("active");
-  
-        const content = faqItem.querySelector(".js-expand-content");
-        if (content.style.display === "block") {
-          content.style.display = "none";
+  const faqItems = document.querySelectorAll(".faq__item");
+
+  faqItems.forEach((item) => {
+    const button = item.querySelector(".faq__subtitle");
+    const answer = item.querySelector(".faq__answer");
+
+    if (button && answer) {
+      answer.style.height = "0";
+      answer.style.transform = "scaleY(0)";
+
+      button.addEventListener("click", () => {
+        const isActive = answer.classList.contains("active");
+
+        if (isActive) {
+          closeAnswer(answer);
         } else {
-          content.style.display = "block";
+          openAnswer(answer);
         }
+
+        answer.classList.toggle("active", !isActive);
+        button.classList.toggle("active", !isActive);
       });
-    });
+    }
   });
-  
-  document.addEventListener("DOMContentLoaded", function () {
-    const faqTitles = document.querySelectorAll(".faq__subtitle");
-  
-    faqTitles.forEach(function (title) {
-      title.addEventListener("click", function () {
-        title.classList.toggle("active");
-      });
+
+  function openAnswer(answer) {
+    const fullHeight = answer.scrollHeight;
+    answer.style.transition = "none";
+    answer.style.height = "auto";
+    requestAnimationFrame(() => {
+      answer.style.transition = "transform 0.5s ease, padding 0.5s ease";
+      answer.style.transform = "scaleY(1)";
     });
-  });
-  
+  }
+
+  function closeAnswer(answer) {
+    answer.style.transition = "transform 0.5s ease, padding 0.5s ease";
+    answer.style.transform = "scaleY(0)";
+  }
+});
