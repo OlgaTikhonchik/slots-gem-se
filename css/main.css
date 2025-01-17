@@ -788,15 +788,17 @@ svg {
 /* ------------ratings------------------- */
 .ratings__wrap {
   display: flex;
+  gap: 20px;
+  max-height: 328px;
 }
 
-.ratings__img,
+/* .ratings__img, */
 .rating__table {
   width: 50%;
 }
 
 .rating__table {
-  min-height: 328px;
+  /* min-height: 328px; */
 }
 
 .rating__table table {
@@ -810,9 +812,10 @@ svg {
 .ratings__img img {
   display: block;
   position: relative;
+  top: 20px;
 }
 .ratings__button {
-  margin-top: 0;
+  margin-top: 16px;
   margin-bottom: 20px;
 }
 
@@ -835,6 +838,42 @@ svg {
 
 .ratings {
   padding: 20px 20px 0 20px;
+}
+
+.rating__wrapper {
+  position: relative;
+  width: 50%;
+  /* padding-left: 78px; */
+  padding-left: 20px;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 48%;
+  transform: translateY(-50%);
+  left: 26%;
+  left: 30%;
+  gap: 4px;
+}
+
+.wrap span {
+  font-size: 43px;
+  line-height: 56px;
+  font-weight: 700;
+}
+
+.wrap p {
+  color: #727489;
+  font-size: 14px;
+}
+
+.ratings__img {
+  /* height: 380px; */
+  width: max-content;
+  max-width: 551px;
 }
 /* --------faq------------- */
 
